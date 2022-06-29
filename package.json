@@ -20,7 +20,7 @@
     "analyze": "BUNDLE_ANALYZE=both npm run build",
     "typecheck": "tsc --noEmit",
     "test": "npx concurrently \"npm run lint\" \"npm run typecheck\"",
-    "ci:install": "npm ci",
+    "ci:install": "npm install",
     "ci:build": "APP_ENV=production npm run build",
     "ci:audit": "npx audit-ci -l",
     "ci:typecheck": "tsc --noEmit",
