@@ -39,7 +39,7 @@ jobs:
 
       # Create .npmrc
       - name: Create .npmrc
-        run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
+        run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
 
       # Install Dependencies
       - name: Install Dependencies
