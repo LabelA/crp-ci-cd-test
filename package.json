@@ -27,6 +27,7 @@
     "ci:lint": "npm run lint"
   },
   "dependencies": {
+    "@labela/continuous-deploy": "^0.2.12",
     "express": "4.18.1",
     "lodash": "4.17.21",
     "next": "12.2.0",
