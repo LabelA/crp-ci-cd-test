@@ -43,9 +43,9 @@ jobs:
 
       # Install Dependencies
       - name: Install Dependencies
-        run: npm run ci:install
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: NPM_TOKEN=${{ secrets.NPM_TOKEN }} npm run ci:install
 
       # Audit dependencies for vulnerabilities
       - name: Dependency Audit
