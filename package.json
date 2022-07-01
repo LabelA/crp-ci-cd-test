@@ -16,7 +16,7 @@
     "postbuild": "next-sitemap",
     "build:static": "next build && next export",
     "server": "next start",
-    "lint": "eslint --ext .ts --ext .tsx --ext .js src/",
+    "lint": "next lint",
     "analyze": "BUNDLE_ANALYZE=both npm run build",
     "typecheck": "tsc --noEmit",
     "test": "npx concurrently \"npm run lint\" \"npm run typecheck\"",
