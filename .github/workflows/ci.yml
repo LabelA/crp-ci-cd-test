@@ -39,13 +39,13 @@ jobs:
 
       # Create .npmrc
       - name: Create .npmrc
-        run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
+        run: echo $'@OWNER:registry=https://registry.npmjs.org\n//registry.npmjs.org/:_authToken=${NPM_TOKEN}' > .npmrc
 
       # Install Dependencies
       - name: Install Dependencies
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: NPM_TOKEN=${{ secrets.NPM_TOKEN }} npm run ci:install
+        run: npm run ci:install
 
       # Audit dependencies for vulnerabilities
       - name: Dependency Audit
